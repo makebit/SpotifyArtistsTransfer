@@ -10,14 +10,14 @@
  */
 class SpotifyArtistsTransfer
 {
-    var $_urlGetFollowedArtists = "https://api.spotify.com/v1/me/following?type=artist&limit=50";
-    var $_urlFollowArtists = "https://api.spotify.com/v1/me/following?type=artist&ids=";
-    var $tokenAccountInput;
-    var $tokenAccountOutput;
-    var $followedArtists = [];
-    var $totalFollowedArtists;
-    var $ch;
-    var $errors;
+    protected $_urlGetFollowedArtists = "https://api.spotify.com/v1/me/following?type=artist&limit=50";
+    protected $_urlFollowArtists = "https://api.spotify.com/v1/me/following?type=artist&ids=";
+    protected $tokenAccountInput;
+    protected $tokenAccountOutput;
+    protected $followedArtists = [];
+    protected $totalFollowedArtists;
+    protected $ch;
+    protected $errors;
 
     const MAXIDS = 50;
 
@@ -27,7 +27,7 @@ class SpotifyArtistsTransfer
     }
 
 
-    function SpotifyArtistsTransfer($tokenAccountInput, $tokenAccountOutput)
+    function _construct($tokenAccountInput, $tokenAccountOutput)
     {
         $this->tokenAccountInput = $tokenAccountInput;
         $this->tokenAccountOutput = $tokenAccountOutput;
