@@ -27,7 +27,7 @@ class SpotifyArtistsTransfer
     }
 
 
-    function _construct($tokenAccountInput, $tokenAccountOutput)
+    function SpotifyArtistsTransfer($tokenAccountInput, $tokenAccountOutput)
     {
         $this->tokenAccountInput = $tokenAccountInput;
         $this->tokenAccountOutput = $tokenAccountOutput;
